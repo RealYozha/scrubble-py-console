@@ -71,6 +71,12 @@ def main():
     player_two_score = calculate_score(player_two_word)
     print(f"Очки игрока 1: {player_one_score}")
     print(f"Очки игрока 2: {player_two_score}")
+    if player_one_score > player_two_score:
+        print("Победил игрок 1!")
+    elif player_two_score > player_one_score:
+        print("Победил игрок 2!")
+    else:
+        print("Ничья")
 
 
 if __name__ == "__main__":
