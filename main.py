@@ -38,12 +38,12 @@ LETTER_SCORES = {
 }
 
 
-def get_random_letter() -> str:
+def get_random_letter():
     all_letters = list(LETTER_SCORES.keys())
     return random.choice(all_letters)
 
 
-def get_word_with_letter(letter: str) -> str:
+def get_word_with_letter(letter: str):
     while True:
         chosen_word = input(f"Введите слово на букву {letter}:")
         if chosen_word.upper()[0] == letter:
@@ -53,7 +53,7 @@ def get_word_with_letter(letter: str) -> str:
             print(f"Слово не начинается на букву {letter}. Введите слово заново.")
 
 
-def calculate_score(word: str) -> int:
+def calculate_score(word: str):
     total_score = 0
     for letter in word:
         total_score += LETTER_SCORES.get(letter.upper(), 0)
